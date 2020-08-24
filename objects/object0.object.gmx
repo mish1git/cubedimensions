@@ -28,7 +28,7 @@
             <string>view_visible[0] = true
 view_visible[1] = false
  script_execute(script0);
-grav = 0.4; 
+grav = 0.5; 
 hsp = 0;
 vsp = 0; 
 jumpSpeed = 8; 
@@ -56,7 +56,7 @@ moveSpeed = 2.5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>grav+=1
+            <string>if grav &lt; 10 grav+=0.5
 hspeed=0
 
             // Get input 
@@ -64,31 +64,36 @@ hspeed=0
 
     // Use input 
     if kLeft {
-hspeed = hspeed - 3;
+hspeed = -3;
 }
 
 if kRight {
-hspeed = hspeed + 3;
+hspeed = 3;
 }
+
+        // H Collisions 
+        CheckCollisionMax = 9
+        while (CheckCollisionMax&gt;0 and place_meeting(x+hspeed,y, obj_wall))
+        {CheckCollisionMax-=1 hspeed/=2}
+        if CheckCollisionMax = 0 {hspeed = 0}
     
-    // H Collisions 
-  if place_meeting(x,y, obj_wall) {y-=1}
-    // v Collisions 
-    if place_meeting(x,y+1, obj_wall) {grav = 0}
-    if place_meeting(x,y-1, obj_wall) {grav = 0}
-    if place_meeting(x-3,y, obj_wall) {x+=3}
-if place_meeting(x+3,y, obj_wall) {x-=3}
-    script_execute(script0);
-      
+        // V Collisions 
+    if vspeed &gt; 0 and place_meeting(x,y+vspeed, obj_wall) or place_meeting(x,y+1, obj_wall) {grav = 0 y=ceil(y)}
+    if vspeed &lt; 0 and place_meeting(x,y+vspeed, obj_wall) {grav = 0.5 y=floor(y)}
+    if place_meeting(x,y, obj_wall) {y-=1 grav = 0}
+
     if kJump {
-grav = -20;
+grav = -10;
 }
       
     if global.life = 0
     {
     game_end();
     }
+    
 vspeed=grav
+
+script_execute(script0)
 </string>
           </argument>
         </arguments>
@@ -112,6 +117,7 @@ vspeed=grav
           <argument>
             <kind>1</kind>
             <string>global.life = global.life - 1;
+grav -= 20
 </string>
           </argument>
         </arguments>

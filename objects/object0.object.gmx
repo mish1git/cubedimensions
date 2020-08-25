@@ -131,16 +131,7 @@ hspeed = 3;
     if place_meeting(x,y, obj_wall) {y-=1 grav = 0}
     
     EnemyTouch2 = EnemyTouch;
-if(instance_place(x,y,object9))
-{
-EnemyTouch = 1;
-}
-else
-{
-EnemyTouch = 0;
-}
-
-if(instance_place(x,y,object8))
+if instance_place(x,y,object9) or instance_place(x,y,object8)
 {
 EnemyTouch = 1;
 }
@@ -189,7 +180,8 @@ draw_rectangle(1, 1, 640, 30, false);
 var roomname = room_get_name(Grassy_Grass_Grass_of_Grassy_Grass_Grassland);
 draw_set_font(font1);
 draw_set_color(c_white)
-draw_text(10, 10, "Lives: " + string(global.life) + "   " + "Section: " + string(roomname));
+draw_text(10, 10, "Lives: " + string(global.life) + "   " + "Section: " + string(roomname))
+draw_text(30,30,EnemyTouch)
 </string>
           </argument>
         </arguments>

@@ -54,6 +54,8 @@ if point_distance(object9.x, object9.y, object0.x, object0.y)&gt;200
 {
 direction = dir;
 }
+
+image_angle=dir
 </string>
           </argument>
         </arguments>

@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>
         
-        if place_meeting(x,y, object0)
+        if place_meeting(x,y-1, object0)
         {
-        vspeed = -20;
+        vspeed = 10;
         }
 </string>
           </argument>

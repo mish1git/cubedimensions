@@ -105,28 +105,19 @@ EnemyTouch2 = 0
           <argument>
             <kind>1</kind>
             <string>if grav &lt; 10 grav+=0.5
-hspeed=0
 
 
             // Get input 
     kLeft = keyboard_check(vk_left); kRight = keyboard_check(vk_right); kJump = keyboard_check_pressed(vk_space);
 
     // Use input 
-    if kLeft {
-hspeed = -3;
-}
-
-if kRight {
-hspeed = 3;
-}
-
-if hspeed &lt; 5  * kRight {hspeed += 0.25 * kRight} else {if hspeed &gt; 0.5 and not kRight {hspeed -= 0.5}}
+if hspeed &lt; 5 * kRight {hspeed += 0.25 * kRight} else {if hspeed &gt; 0.5 and not kRight {hspeed -= 0.5}}
 if hspeed &gt; -5 * kLeft {hspeed -= 0.25 * kLeft} else {if hspeed &lt; -0.5 and not kLeft {hspeed += 0.5}}
-if abs(hspeed) &lt; 0.5-kLeft-kRight {hspeed = 0}
+if abs(hspeed) &lt;= 0.5-kLeft-kRight {hspeed = 0}
 
         // H Collisions 
         CheckCollisionMax = 9
-        while (CheckCollisionMax&gt;0 and place_meeting(x+hspeed,y, obj_wall)) and place_meeting(x+hspeed,y, object11)
+        while (CheckCollisionMax&gt;0 and (place_meeting(x+hspeed,y, obj_wall) or place_meeting(x+hspeed,y, object11)))
         {CheckCollisionMax-=1 hspeed/=2}
         if CheckCollisionMax = 0 {hspeed = 0}
     
@@ -199,6 +190,7 @@ draw_rectangle(1, 1, 640, 30, false);
 draw_set_font(font1);
 draw_set_color(c_white)
 draw_text(10, 10, "Lives: " + string(global.life) + "   " + "Section: " + string(global.roomname))
+draw_text(30,50,hspeed)
 </string>
           </argument>
         </arguments>

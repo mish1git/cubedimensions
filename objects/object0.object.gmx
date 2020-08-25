@@ -107,6 +107,7 @@ EnemyTouch2 = 0
             <string>if grav &lt; 10 grav+=0.5
 hspeed=0
 
+
             // Get input 
     kLeft = keyboard_check(vk_left); kRight = keyboard_check(vk_right); kJump = keyboard_check_pressed(vk_space);
 
@@ -119,15 +120,22 @@ if kRight {
 hspeed = 3;
 }
 
+if hspeed &lt; 5  * kRight {hspeed += 0.25 * kRight} else {if hspeed &gt; 0.5 and not kRight {hspeed -= 0.5}}
+if hspeed &gt; -5 * kLeft {hspeed -= 0.25 * kLeft} else {if hspeed &lt; -0.5 and not kLeft {hspeed += 0.5}}
+if abs(hspeed) &lt; 0.5-kLeft-kRight {hspeed = 0}
+
         // H Collisions 
         CheckCollisionMax = 9
-        while (CheckCollisionMax&gt;0 and place_meeting(x+hspeed,y, obj_wall))
+        while (CheckCollisionMax&gt;0 and place_meeting(x+hspeed,y, obj_wall)) and place_meeting(x+hspeed,y, object11)
         {CheckCollisionMax-=1 hspeed/=2}
         if CheckCollisionMax = 0 {hspeed = 0}
     
         // V Collisions 
     if vspeed &gt; 0 and place_meeting(x,y+vspeed, obj_wall) or place_meeting(x,y+1, obj_wall) {grav = 0 y=ceil(y) ToJump = 1}
     if vspeed &lt; 0 and place_meeting(x,y+vspeed, obj_wall) {grav = 0.5 y=floor(y)}
+    
+    if vspeed &gt; 0 and place_meeting(x,y+vspeed, object11) or place_meeting(x,y+1, object11) {grav = 0 y=ceil(y) ToJump = 1}
+    if vspeed &lt; 0 and place_meeting(x,y+vspeed, object11) {grav = 0.5 y=floor(y)}
     if place_meeting(x,y, obj_wall) {y-=1 grav = 0}
     
     EnemyTouch2 = EnemyTouch;
@@ -140,6 +148,13 @@ else
 EnemyTouch = 0;
 }
 
+if(EnemyTouch = 1) and (EnemyTouch2 = 0)
+{
+audio_play_sound(sound2, 10, false);
+global.life -= 1;
+grav = -5;
+}
+
     if kJump and ToJump = 1  {
 audio_play_sound(sound1, 10, false);
 grav = -10;
@@ -148,11 +163,15 @@ ToJump = 0
       
     if global.life = 0
     {
-    game_end();
+    game_restart();
     }
     
 vspeed=grav
 
+if instance_place(x,y,object10)
+{
+room_goto(Further_Down);
+}
 </string>
           </argument>
         </arguments>
@@ -177,11 +196,9 @@ vspeed=grav
             <kind>1</kind>
             <string>draw_set_color(c_black)
 draw_rectangle(1, 1, 640, 30, false);
-var roomname = room_get_name(Grassy_Grass_Grass_of_Grassy_Grass_Grassland);
 draw_set_font(font1);
 draw_set_color(c_white)
-draw_text(10, 10, "Lives: " + string(global.life) + "   " + "Section: " + string(roomname))
-draw_text(30,30,EnemyTouch)
+draw_text(10, 10, "Lives: " + string(global.life) + "   " + "Section: " + string(global.roomname))
 </string>
           </argument>
         </arguments>

@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\sound0</sound>
     <sound>sound\sound1</sound>
+    <sound>sound\sound2</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
@@ -17,6 +18,7 @@
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\sprite8</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -47,9 +49,12 @@
     <object>objects\object8</object>
     <object>objects\object0</object>
     <object>objects\object9</object>
+    <object>objects\object10</object>
+    <object>objects\object11</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Grassy_Grass_Grass_of_Grassy_Grass_Grassland</room>
+    <room>rooms\Further_Down</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

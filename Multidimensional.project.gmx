@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+    <sound>sound\sound1</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
     <sprite>sprites\sprite1</sprite>
@@ -13,6 +16,7 @@
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\sprite6</sprite>
+    <sprite>sprites\sprite7</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -21,6 +25,7 @@
     <background>background\background3</background>
     <background>background\background4</background>
     <background>background\background5</background>
+    <background>background\background6</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -28,6 +33,9 @@
     <script>scripts\script1.gml</script>
     <script>scripts\scr_lives.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font1</font>
+  </fonts>
   <objects name="objects">
     <object>objects\object2</object>
     <object>objects\obj_wall</object>
@@ -38,9 +46,10 @@
     <object>objects\object7</object>
     <object>objects\object8</object>
     <object>objects\object0</object>
+    <object>objects\object9</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\Grassy_Grass_Grass_of_Grassy_Grass_Grassland</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

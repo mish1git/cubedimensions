@@ -31,9 +31,57 @@ view_visible[1] = false
 grav = 0.5; 
 hsp = 0;
 vsp = 0; 
+ToJump = 1;
 jumpSpeed = 8; 
 moveSpeed = 2.5;
-
+EnemyTouch = 0;
+EnemyTouch2 = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.life = global.life - 0.5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>script_execute(script0)
 </string>
           </argument>
         </arguments>
@@ -78,12 +126,33 @@ hspeed = 3;
         if CheckCollisionMax = 0 {hspeed = 0}
     
         // V Collisions 
-    if vspeed &gt; 0 and place_meeting(x,y+vspeed, obj_wall) or place_meeting(x,y+1, obj_wall) {grav = 0 y=ceil(y)}
+    if vspeed &gt; 0 and place_meeting(x,y+vspeed, obj_wall) or place_meeting(x,y+1, obj_wall) {grav = 0 y=ceil(y) ToJump = 1}
     if vspeed &lt; 0 and place_meeting(x,y+vspeed, obj_wall) {grav = 0.5 y=floor(y)}
     if place_meeting(x,y, obj_wall) {y-=1 grav = 0}
+    
+    EnemyTouch2 = EnemyTouch;
+if(instance_place(x,y,object9))
+{
+EnemyTouch = 1;
+}
+else
+{
+EnemyTouch = 0;
+}
 
-    if kJump {
+if(instance_place(x,y,object8))
+{
+EnemyTouch = 1;
+}
+else
+{
+EnemyTouch = 0;
+}
+
+    if kJump and ToJump = 1  {
+audio_play_sound(sound1, 10, false);
 grav = -10;
+ToJump = 0
 }
       
     if global.life = 0
@@ -93,31 +162,6 @@ grav = -10;
     
 vspeed=grav
 
-script_execute(script0)
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="object8">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.life = global.life - 1;
-grav -= 20
 </string>
           </argument>
         </arguments>
@@ -140,7 +184,12 @@ grav -= 20
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(10, 10, global.life);
+            <string>draw_set_color(c_black)
+draw_rectangle(1, 1, 640, 30, false);
+var roomname = room_get_name(Grassy_Grass_Grass_of_Grassy_Grass_Grassland);
+draw_set_font(font1);
+draw_set_color(c_white)
+draw_text(10, 10, "Lives: " + string(global.life) + "   " + "Section: " + string(roomname));
 </string>
           </argument>
         </arguments>

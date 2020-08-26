@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>Angry = 0
+</string>
           </argument>
         </arguments>
       </action>
@@ -47,15 +48,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir = point_direction(object9.x, object9.y, object0.x, object0.y)
-speed = 2;
+            <string>dir = point_direction(object9.x, object9.y, object0.x, object0.y);
+speed = 0;
 
-if point_distance(object9.x, object9.y, object0.x, object0.y)&gt;200
+if distance_to_object(object0) &gt; 200
+{
+Angry = 1
+if Angry = 1
 {
 direction = dir;
+speed = 2;
+image_angle= dir;
+}
 }
 
-image_angle=dir
+if distance_to_object(object0) &lt; 200
+{
+Angry = 0
+speed = 0
+}
 </string>
           </argument>
         </arguments>

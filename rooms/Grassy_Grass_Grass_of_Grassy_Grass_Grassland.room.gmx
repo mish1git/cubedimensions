@@ -118,12 +118,8 @@ var global.roomname = room_get_name(Grassy_Grass_Grass_of_Grassy_Grass_Grassland
     <instance objName="obj_wall" x="32" y="480" name="inst_AB929C3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="512" name="inst_FC306B97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="352" name="inst_3BD2081F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object8" x="96" y="512" name="inst_1E394421" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="object8" x="128" y="512" name="inst_5222E8B5" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="object8" x="160" y="512" name="inst_272AA7DE" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="object8" x="192" y="512" name="inst_EB1BE6C9" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="object8" x="160" y="320" name="inst_B14D3FCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object9" x="224" y="640" name="inst_16C7920E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object9" x="384" y="576" name="inst_16C7920E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="736" name="inst_B486691B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="448" y="736" name="inst_60E57B89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="480" y="736" name="inst_2412D066" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -145,7 +141,9 @@ var global.roomname = room_get_name(Grassy_Grass_Grass_of_Grassy_Grass_Grassland
     <instance objName="object10" x="384" y="736" name="inst_4F0EA99B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object10" x="544" y="736" name="inst_5645F648" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object10" x="576" y="736" name="inst_D8E6E56C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object11" x="416" y="672" name="inst_0FE35F6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object8" x="96" y="640" name="inst_AC5DE34E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object8" x="256" y="704" name="inst_40AF2E58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object8" x="224" y="704" name="inst_93A9A196" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background3" x="0" y="320" w="32" h="32" xo="32" yo="0" id="10000002" name="inst_8E187D58" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

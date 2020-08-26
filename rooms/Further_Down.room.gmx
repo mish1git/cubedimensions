@@ -250,6 +250,24 @@ script_execute(script0);</code>
     <instance objName="obj_wall" x="384" y="736" name="inst_A2B2C387" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="736" name="inst_E7B9B0EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="448" y="736" name="inst_277E0621" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object9" x="448" y="608" name="inst_75B9AC44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="64" y="736" name="inst_F4872DEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="32" y="736" name="inst_65EA001F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="0" y="736" name="inst_384F5114" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="992" y="736" name="inst_6F96965E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="928" y="736" name="inst_2750A3FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="960" y="736" name="inst_354DA1D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="896" y="736" name="inst_94D6783B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="864" y="736" name="inst_64A5FF0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="832" y="736" name="inst_5050B29A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="800" y="736" name="inst_C9AB586A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="768" y="736" name="inst_48ECE316" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="736" y="736" name="inst_7BA87EC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="704" y="736" name="inst_2D123D24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="672" y="736" name="inst_753FB515" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="640" y="736" name="inst_0093AEEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="576" y="736" name="inst_2BF93D63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object12" x="608" y="736" name="inst_8B9A4B4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background3" x="0" y="0" w="32" h="32" xo="64" yo="32" id="10000119" name="inst_2024391B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

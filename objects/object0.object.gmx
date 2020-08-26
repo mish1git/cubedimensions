@@ -144,6 +144,8 @@ if(EnemyTouch = 1) and (EnemyTouch2 = 0)
 audio_play_sound(sound2, 10, false);
 global.life -= 1;
 grav = -5;
+direction -= 180;
+speed *= -1;
 }
 
     if kJump and ToJump = 1  {
@@ -162,6 +164,11 @@ vspeed=grav
 if instance_place(x,y,object10)
 {
 room_goto(Further_Down);
+}
+
+if instance_place(x,y,object12)
+{
+room_goto(Spiky_Spiked_Pit);
 }
 </string>
           </argument>
@@ -186,11 +193,10 @@ room_goto(Further_Down);
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_black)
-draw_rectangle(1, 1, 640, 30, false);
+draw_rectangle(0, 0, 640, 30, false);
 draw_set_font(font1);
 draw_set_color(c_white)
-draw_text(10, 10, "Lives: " + string(global.life) + "   " + "Section: " + string(global.roomname))
-draw_text(30,50,hspeed)
+draw_text(15, 10, "Lives: " + string(global.life) + "   " + "Section: " + string(global.roomname))
 </string>
           </argument>
         </arguments>

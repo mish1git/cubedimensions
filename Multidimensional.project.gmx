@@ -50,11 +50,13 @@
     <object>objects\object0</object>
     <object>objects\object9</object>
     <object>objects\object10</object>
+    <object>objects\object12</object>
     <object>objects\object11</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Grassy_Grass_Grass_of_Grassy_Grass_Grassland</room>
     <room>rooms\Further_Down</room>
+    <room>rooms\Spiky_Spiked_Pit</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -160,7 +160,6 @@ var global.roomname = room_get_name(Grassy_Grass_Grass_of_Grassy_Grass_Grassland
     <instance objName="obj_wall" x="928" y="512" name="inst_E227323A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="960" y="512" name="inst_AAA24F3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="992" y="512" name="inst_45865AB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object16" x="224" y="160" name="inst_C616E044" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background3" x="0" y="320" w="32" h="32" xo="32" yo="0" id="10000002" name="inst_8E187D58" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -48,12 +48,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>irandom(5)
-
-dir = point_direction(object9.x, object9.y, object0.x, object0.y);
+            <string>dir = point_direction(object9.x, object9.y, object0.x, object0.y);
 speed = 0;
 
-if distance_to_object(object0) &gt; 200 and irandom(5) = 3
+if distance_to_object(object0) &gt; 200
 {
 Angry = 1
 if Angry = 1

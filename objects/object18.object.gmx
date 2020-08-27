@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>dir = point_direction(object9.x, object9.y, object0.x, object0.y);
 
+
 direction = dir;
 speed = 2;
 image_angle= dir;

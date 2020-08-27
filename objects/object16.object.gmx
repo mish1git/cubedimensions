@@ -48,7 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if distance_to_object(object0) &lt; 200
+            <string>irandom(5)
+
+if distance_to_object(object0) &lt; 200 and irandom(5) = 3
 {
 Angry = 1
 if Angry = 1

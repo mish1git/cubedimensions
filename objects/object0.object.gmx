@@ -35,7 +35,8 @@ ToJump = 1;
 jumpSpeed = 8; 
 moveSpeed = 2.5;
 EnemyTouch = 0;
-EnemyTouch2 = 0
+EnemyTouch2 = 0;
+global.life =  3;
 </string>
           </argument>
         </arguments>
@@ -127,10 +128,11 @@ if abs(hspeed) &lt;= 0.5-kLeft-kRight {hspeed = 0}
     
     if vspeed &gt; 0 and place_meeting(x,y+vspeed, object11) or place_meeting(x,y+1, object11) {grav = 0 y=ceil(y) ToJump = 1}
     if vspeed &lt; 0 and place_meeting(x,y+vspeed, object11) {grav = 0.5 y=floor(y)}
+    
     if place_meeting(x,y, obj_wall) {y-=1 grav = 0}
     
     EnemyTouch2 = EnemyTouch;
-if instance_place(x,y,object9) or instance_place(x,y,object8)
+if instance_place(x,y,object9) or instance_place(x,y,object8) or instance_place(x,y,object18)
 {
 EnemyTouch = 1;
 }
@@ -169,6 +171,40 @@ room_goto(Further_Down);
 if instance_place(x,y,object12)
 {
 room_goto(Spiky_Spiked_Pit);
+}
+
+if instance_place(x,y,object13)
+{
+room_goto(The_Deep_Depths_of_Earth);
+}
+
+if instance_place(x,y,object14)
+{
+room_goto(Enter_the_Void);
+}
+
+if instance_place(x,y,object15)
+{
+room_goto(Vacive);
+}
+
+if instance_place(x,y,object17)
+{
+room_goto(XYZ);
+}
+
+if instance_place(x,y,object19)
+{
+room_goto(Weeeeeeeeeee);
+}
+
+if instance_place(x,y,obj_portal1)
+{
+if instance_exists(obj_portal2)
+{
+    object0.x = obj_portal2.x
+    object0.y = obj_portal2.y
+}
 }
 </string>
           </argument>

@@ -8,6 +8,8 @@
     <sound>sound\sound0</sound>
     <sound>sound\sound1</sound>
     <sound>sound\sound2</sound>
+    <sound>sound\sound3</sound>
+    <sound>sound\sound4</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
@@ -19,6 +21,10 @@
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\sprite7</sprite>
     <sprite>sprites\sprite8</sprite>
+    <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\sprite10</sprite>
+    <sprite>sprites\sprite11</sprite>
+    <sprite>sprites\sprite12</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -28,6 +34,14 @@
     <background>background\background4</background>
     <background>background\background5</background>
     <background>background\background6</background>
+    <background>background\background7</background>
+    <background>background\background8</background>
+    <background>background\background9</background>
+    <background>background\background10</background>
+    <background>background\background11</background>
+    <background>background\background12</background>
+    <background>background\background13</background>
+    <background>background\background14</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -39,24 +53,32 @@
     <font>fonts\font1</font>
   </fonts>
   <objects name="objects">
-    <object>objects\object2</object>
     <object>objects\obj_wall</object>
-    <object>objects\obj_wall2</object>
-    <object>objects\obj_wall3</object>
-    <object>objects\obj_gravchange</object>
-    <object>objects\object4</object>
-    <object>objects\object7</object>
     <object>objects\object8</object>
     <object>objects\object0</object>
     <object>objects\object9</object>
     <object>objects\object10</object>
+    <object>objects\object19</object>
+    <object>objects\object15</object>
+    <object>objects\object17</object>
     <object>objects\object12</object>
+    <object>objects\object13</object>
+    <object>objects\object14</object>
     <object>objects\object11</object>
+    <object>objects\obj_portal1</object>
+    <object>objects\obj_portal2</object>
+    <object>objects\object16</object>
+    <object>objects\object18</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Grassy_Grass_Grass_of_Grassy_Grass_Grassland</room>
     <room>rooms\Further_Down</room>
     <room>rooms\Spiky_Spiked_Pit</room>
+    <room>rooms\The_Deep_Depths_of_Earth</room>
+    <room>rooms\Enter_the_Void</room>
+    <room>rooms\Vacive</room>
+    <room>rooms\XYZ</room>
+    <room>rooms\Weeeeeeeeeee</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

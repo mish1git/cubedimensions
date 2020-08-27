@@ -129,7 +129,12 @@ if abs(hspeed) &lt;= 0.5-kLeft-kRight {hspeed = 0}
     if vspeed &gt; 0 and place_meeting(x,y+vspeed, object11) or place_meeting(x,y+1, object11) {grav = 0 y=ceil(y) ToJump = 1}
     if vspeed &lt; 0 and place_meeting(x,y+vspeed, object11) {grav = 0.5 y=floor(y)}
     
-    if place_meeting(x,y, obj_wall) {y-=1 grav = 0}
+    if place_meeting(x,y, obj_wall) 
+    {
+    y-=1 grav = 0
+    if place_meeting(x+32,y,obj_wall) {x-=1}
+    if place_meeting(x-32,y,obj_wall) {x+=1}
+    }
     
     EnemyTouch2 = EnemyTouch;
 if instance_place(x,y,object9) or instance_place(x,y,object8) or instance_place(x,y,object18)
@@ -236,6 +241,22 @@ draw_text(15, 10, "Lives: " + string(global.life) + "   " + "Section: " + string
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>223</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_current_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

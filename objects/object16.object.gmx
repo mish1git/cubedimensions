@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Angry = 0
-Spawn = 0
+            <string>SpawnTimer = 60
 </string>
           </argument>
         </arguments>
@@ -49,21 +48,14 @@ Spawn = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>irandom(20)
-
-if distance_to_object(object0) &lt; 200 and irandom(20) = 10 and Spawn = 0
+            <string>if distance_to_object(object0) &lt; 200
 {
-Angry = 1
-if Angry = 1
-{
-instance_create(object16.x, object16.y, object18);
-Spawn = 0
-}
-}
-
-if distance_to_object(object0) &gt; 200
-{
-Angry = 0
+    if SpawnTimer &gt; 50
+    {
+        instance_create(x, y, object18);
+        SpawnTimer = 0
+    }
+    SpawnTimer += 1
 }
 </string>
           </argument>

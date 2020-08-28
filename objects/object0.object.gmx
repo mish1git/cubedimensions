@@ -203,6 +203,16 @@ if instance_place(x,y,object19)
 room_goto(Weeeeeeeeeee);
 }
 
+if instance_place(x,y,object20)
+{
+room_goto(Danmaku_Shower);
+}
+
+if instance_place(x,y,object22)
+{
+room_goto(Scrooooooooool);
+}
+
 if instance_place(x,y,obj_portal1)
 {
 if instance_exists(obj_portal2)
@@ -211,6 +221,7 @@ if instance_exists(obj_portal2)
     object0.y = obj_portal2.y
 }
 }
+
 </string>
           </argument>
         </arguments>

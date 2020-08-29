@@ -76,8 +76,8 @@
     <object>objects\object21</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Scrooooooooool</room>
     <room>rooms\Grassy_Grass_Grass_of_Grassy_Grass_Grassland</room>
+    <room>rooms\Scrooooooooool</room>
     <room>rooms\Further_Down</room>
     <room>rooms\Spiky_Spiked_Pit</room>
     <room>rooms\The_Deep_Depths_of_Earth</room>

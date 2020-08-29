@@ -37,6 +37,8 @@ moveSpeed = 2.5;
 EnemyTouch = 0;
 EnemyTouch2 = 0;
 global.life =  3;
+
+paused = instance_deactivate_all(true);
 </string>
           </argument>
         </arguments>
@@ -221,6 +223,14 @@ if instance_exists(obj_portal2)
     object0.y = obj_portal2.y
 }
 }
+
+if keyboard_check_pressed(vk_enter)
+{
+paused = true
+} else {
+paused = false
+}
+
 
 </string>
           </argument>

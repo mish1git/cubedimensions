@@ -37,8 +37,6 @@ moveSpeed = 2.5;
 EnemyTouch = 0;
 EnemyTouch2 = 0;
 global.life =  3;
-
-paused = instance_deactivate_all(true);
 </string>
           </argument>
         </arguments>
@@ -127,12 +125,22 @@ if abs(hspeed) &lt;= 0.5-kLeft-kRight {hspeed = 0}
     // V Collisions 
     if vspeed &gt; 0 and place_meeting(x,y+vspeed, obj_wall) or place_meeting(x,y+1, obj_wall) {vspeed = 0 y=ceil(y) ToJump = 1}
     if vspeed &lt; 0 and place_meeting(x,y+vspeed, obj_wall) {vspeed = 0.5 y=floor(y)}
+    
+    if vspeed &gt; 0 and place_meeting(x,y+vspeed, object11) or place_meeting(x,y+1, object11) {vspeed = 0 y=ceil(y) ToJump = 1}
+    if vspeed &lt; 0 and place_meeting(x,y+vspeed, object11) {vspeed = 0.5 y=floor(y)}
       
     if place_meeting(x,y, obj_wall) 
     {
     y-=1 vspeed = 0
     if place_meeting(x+32,y,obj_wall) {x-=1}
     if place_meeting(x-32,y,obj_wall) {x+=1}
+    }
+    
+        if place_meeting(x,y, object11) 
+    {
+    y-=1 vspeed = 0
+    if place_meeting(x+32,y,object11) {x-=1}
+    if place_meeting(x-32,y,object11) {x+=1}
     }
     
     EnemyTouch2 = EnemyTouch;
@@ -218,12 +226,6 @@ if instance_exists(obj_portal2)
 }
 }
 
-if keyboard_check_pressed(vk_enter)
-{
-paused = true
-} else {
-paused = false
-}
 </string>
           </argument>
         </arguments>

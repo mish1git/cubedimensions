@@ -77,7 +77,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Grassy_Grass_Grass_of_Grassy_Grass_Grassland</room>
-    <room>rooms\Scrooooooooool</room>
     <room>rooms\Further_Down</room>
     <room>rooms\Spiky_Spiked_Pit</room>
     <room>rooms\The_Deep_Depths_of_Earth</room>
@@ -86,6 +85,7 @@
     <room>rooms\XYZ</room>
     <room>rooms\Weeeeeeeeeee</room>
     <room>rooms\Danmaku_Shower</room>
+    <room>rooms\Scrooooooooool</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
